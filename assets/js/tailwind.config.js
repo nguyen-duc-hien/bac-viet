@@ -37,8 +37,9 @@ tailwind.config = {
                 // 200: '#9BACE0',
                 // 100: '#CCD4ED',
                 50: '#fcfaf7',
-                // 25: '#EFEFEF',
+                25: '#EFEFEF',
             },
+            secondary: '#FFF5D5',
             neutralc: {
                 // 1000: "#",
                 950: "#0D0D0D",
@@ -53,12 +54,19 @@ tailwind.config = {
                 100: "#E6E6E6",
                 50: "#F2F2F2",
             },
+            mono: {
+                dark: {
+                    90: '#151515',
+                },
+            },
             gray: {
                 10: "#112722",
                 9: "#1F2237",
                 8: "#373A51",
                 7: "#4B4E63",
                 6: "#6B7280",
+                3: "#E5E7EB",
+                2: "#F3F4F6",
                 1: "#F9FAFB",
             },
         }

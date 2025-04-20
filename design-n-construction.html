@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiết kế & thi công gian hàng hiện đại</title>
+    <!-- taildwind css import -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind.config.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="/assets/style/main.css" />
+
+    <!-- font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- fancy box -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
+        integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <!-- header pc -->
+            <div class="header-pc hidden lg:block fixed top-0 w-full z-[5]">
+                <div class="container flex items-center justify-between py-3 gap-10">
+                    <a href="/">
+                        <figure class="lg:max-w-[90px] 2xl:max-w-[124px]"><img src="/assets/image/header-logo.svg"
+                                alt="logo"></figure>
+                    </a>
+                    <div class="flex items-center gap-10">
+                        <nav class="">
+                            <ul class="flex items-center justify-between gap-3 2xl:gap-6 3xl:gap-12">
+                                <li class="">
+                                    <a href="#" class="link-nav">Trang chủ</a>
+                                </li>
+                                <li class="relative sub-button">
+                                    <a href="#" class="link-nav">Dịch vụ
+                                        <figure class="w-6 h-6"><img src="/assets/image/icon/nav-chev-down.svg"
+                                                alt="icon">
+                                        </figure>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li class="sub-item">
+                                            <a href="#" class="nav-link">sub 1</a>
+                                        </li>
+                                        <li class="sub-item">
+                                            <a href="#" class="nav-link">sub 1</a>
+                                        </li>
+                                        <li class="sub-item">
+                                            <a href="#" class="nav-link">sub 1</a>
+                                        </li>
+                                        <li class="sub-item">
+                                            <a href="#" class="nav-link">sub 1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="link-nav">Về chúng tôi</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="link-nav">Dự án tiêu biểu</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="link-nav">Tin tức</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="link-nav">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a href="#" class="button h-12">Nhận tư vấn miễn phí</a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- header-mobile -->
+            <div class="w-full lg:hidden header-mobile fixed top-0 z-[5] ">
+                <div class="container flex justify-between py-5">
+                    <a href="/">
+                        <div class="logo">
+                            <figure class="max-w-[60px]">
+                                <img src="/assets/image/header-logo.svg" alt="logo">
+                            </figure>
+                        </div>
+                    </a>
+                    <button class="breadcrumb-button">
+                        <figure>
+                            <img src="/assets/image/icon/3bar.svg" alt="">
+                        </figure>
+                    </button>
+                </div>
+                <div
+                    class="breadcrumb-header hidden fixed w-[70vw] max-w-[350px] h-[100vh] top-0 right-0 z-[5] transform transition-transform duration-300 ease-in-out translate-x-full">
+                    <div class="shadow-1 flex flex-col gap-10 bg-white w-full h-full p-6">
+                        <div class="flex items-center justify-between">
+                            <a href="/">
+                                <div class="logo">
+                                    <figure class="max-w-[60px]">
+                                        <img src="/assets/image/header-logo.svg" alt="logo">
+                                    </figure>
+                                </div>
+                            </a>
+                            <button class="breadcrumb-close">
+                                <figure class="w-8 h-8">
+                                    <img src="/assets/image/icon/close.svg" alt="">
+                                </figure>
+                            </button>
+                        </div>
+
+                        <div class="breadcrumb-container custom-scrollbar">
+                            <nav class="">
+                                <ul class="flex flex-col justify-between gap-3 2xl:gap-6 3xl:gap-12">
+                                    <li class="">
+                                        <a href="#" class="link-nav">Trang chủ</a>
+                                    </li>
+                                    <li class="relative sub-button">
+                                        <a href="#" class="link-nav">Dịch vụ
+                                            <figure class="w-6 h-6"><img src="/assets/image/icon/nav-chev-down.svg"
+                                                    alt="icon">
+                                            </figure>
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li class="sub-item">
+                                                <a href="#" class="nav-link">sub 1</a>
+                                            </li>
+                                            <li class="sub-item">
+                                                <a href="#" class="nav-link">sub 1</a>
+                                            </li>
+                                            <li class="sub-item">
+                                                <a href="#" class="nav-link">sub 1</a>
+                                            </li>
+                                            <li class="sub-item">
+                                                <a href="#" class="nav-link">sub 1</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="link-nav">Về chúng tôi</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="link-nav">Dự án tiêu biểu</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="link-nav">Tin tức</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="link-nav">Liên hệ</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- holder header -->
+            <div class="h-[95px] lg:h-[106px] 2xl:h-[136px]"></div>
+        </div>
+    </header>
+    <main>
+        <!-- -------------------- section 1 -------------------- -->
+        <section class="first-banner h-[240px] lg:h-[364px] flex items-center justify-center">
+            <style>
+                .first-banner {
+                    position: relative;
+                    background: url(/assets/image/first-banner.png) no-repeat center/cover;
+                }
+
+                .first-banner::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.53);
+                }
+            </style>
+            <div class="container relative z-[2] flex items-center justify-center">
+                <h1 class="text-heading-h1 text-white">Thiết kế & thi công gian hàng hiện đại</h1>
+            </div>
+        </section>
+        <!-- -------------------- section 2 -------------------- -->
+        <section class="py-10 lg:py-[100px]">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <figure class="rounde-2xl overflow-hidden"><img src="/assets/image/design-s2-img.png" alt="img">
+                    </figure>
+                    <div class="lg:pl-6 2xl:pl-14 flex flex-col justify-center gap-5">
+                        <h2 class="text-heading-h1 text-gray-9">
+                            Gian hàng hiện đại là gì?
+                        </h2>
+                        <p class="text-body-md-regular text-gray-7">
+                            Gian hàng hiện đại là một khoảng không gian được thiết kế và thi công để các doanh nghiệp
+                            quảng bá thương hiệu, giới
+                            thiệu sản phẩm/dịch vụ đến khách hàng tiềm năng. Thời gian triển lãm thường kéo dài từ 3 đến
+                            5 ngày tùy theo từng cuộc
+                            triển lãm.
+                            Gian hàng hiện đại thường được thiết kế theo phong cách riêng biệt, thể hiện hình ảnh thương
+                            hiệu của doanh nghiệp, thu
+                            hút sự chú ý của khách tham quan và tạo ấn tượng khó phai.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------- section 3 -------------------- -->
+        <section class="py-10 lg:py-[100px] bg-secondary relative">
+            <div class="absolute top-0 right-0">
+                <figure><img src="/assets/image/desgin-illus.svg" alt="illus"></figure>
+            </div>
+            <div class="container flex flex-col items-center gap-10 lg:gap-16">
+                <h2 class="text-heading-h1 text-gray-9">
+                    Tại sao nên thiết kế gian hàng hiện đại?
+                </h2>
+
+                <style>
+                    .why-choose-design {
+                        display: flex;
+                        padding: 32px 24px;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 20px;
+                        border-radius: 16px;
+                        border: 1px solid #EFEFEF;
+                        background: #FFF;
+                    }
+                </style>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                    <div class="why-choose-design">
+                        <div class="icon-hover icon-72-32 bg-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7 7.99996C7 4.50216 9.83553 1.66663 13.3333 1.66663C16.8311 1.66663 19.6667 4.50216 19.6667 7.99996C19.6667 11.4978 16.8311 14.3333 13.3333 14.3333C9.83553 14.3333 7 11.4978 7 7.99996ZM13.3333 3.66663C10.9401 3.66663 9 5.60673 9 7.99996C9 10.3932 10.9401 12.3333 13.3333 12.3333C15.7266 12.3333 17.6667 10.3932 17.6667 7.99996C17.6667 5.60673 15.7266 3.66663 13.3333 3.66663Z"
+                                    fill="#EAC006" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.23753 18.0271C8.10336 16.961 10.6142 16.3333 13.3333 16.3333C16.0524 16.3333 18.5633 16.961 20.4291 18.0271C22.2667 19.0772 23.6667 20.6801 23.6667 22.6666C23.6667 24.6531 22.2667 26.2561 20.4291 27.3061C18.5633 28.3723 16.0524 29 13.3333 29C10.6142 29 8.10336 28.3723 6.23753 27.3061C4.4 26.2561 3 24.6531 3 22.6666C3 20.6801 4.4 19.0772 6.23753 18.0271ZM7.22981 19.7636C5.68934 20.6439 5 21.7076 5 22.6666C5 23.6257 5.68934 24.6894 7.22981 25.5696C8.74199 26.4337 10.8978 27 13.3333 27C15.7689 27 17.9247 26.4337 19.4369 25.5696C20.9773 24.6894 21.6667 23.6257 21.6667 22.6666C21.6667 21.7076 20.9773 20.6439 19.4369 19.7636C17.9247 18.8995 15.7689 18.3333 13.3333 18.3333C10.8978 18.3333 8.74199 18.8995 7.22981 19.7636Z"
+                                    fill="#EAC006" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M30.3333 12.9289C30.3333 11.466 29.5834 10.2683 28.3391 9.83208C27.3667 9.4912 26.2884 9.68363 25.3333 10.3124C24.3783 9.68363 23.3 9.4912 22.3275 9.83209C21.0833 10.2683 20.3333 11.466 20.3333 12.9289C20.3333 13.9554 20.9216 14.8638 21.4999 15.5324C22.1043 16.2313 22.8522 16.8436 23.4656 17.2936L23.5596 17.363C24.0279 17.7093 24.5609 18.1034 25.3333 18.1034C26.1057 18.1034 26.6387 17.7093 27.1071 17.363L27.2011 17.2937C27.8145 16.8436 28.5624 16.2313 29.1668 15.5324C29.7451 14.8638 30.3333 13.9554 30.3333 12.9289ZM26.0249 12.3107C26.7257 11.6398 27.3438 11.6025 27.6775 11.7195C27.9832 11.8267 28.3333 12.1609 28.3333 12.9289C28.3333 13.215 28.145 13.6564 27.6541 14.2241C27.1892 14.7616 26.5752 15.2723 26.018 15.6811C25.7163 15.9025 25.5731 16.0045 25.4585 16.065C25.386 16.1033 25.3659 16.1034 25.3333 16.1034C25.3008 16.1034 25.2807 16.1033 25.2081 16.065C25.0936 16.0045 24.9504 15.9025 24.6487 15.6811C24.0914 15.2722 23.4775 14.7616 23.0126 14.2241C22.5216 13.6564 22.3333 13.215 22.3333 12.9289C22.3333 12.1609 22.6834 11.8267 22.9892 11.7195C23.3229 11.6025 23.941 11.6398 24.6418 12.3107C25.0285 12.681 25.6382 12.681 26.0249 12.3107Z"
+                                    fill="#EAC006" />
+                            </svg>
+                        </div>
+                        <div class="flex flex-col items-center gap-4">
+                            <p class="text-body-xl-semibold text-gray-9 text-center">
+                                Tạo ấn tượng với
+                                <br> khách hàng
+                            </p>
+                            <p class="text-body-md-regular text-gray-9 text-center">
+                                Gian hàng đẹp được thiết kế ấn tượng thu hút khách tham quan, thể hiện tính chuyên
+                                nghiệp và khuyến khích họ tìm hiểu
+                                thêm về sản phẩm, dịch vụ.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="why-choose-design">
+                        <div class="icon-hover icon-72-32 bg-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.9305 1.66663H22.7358C23.9338 1.66659 24.9328 1.66656 25.7258 1.77318C26.5629 1.88572 27.3186 2.13328 27.9259 2.74057C28.5332 3.34786 28.7808 4.1036 28.8933 4.94066C28.9999 5.7337 28.9999 6.73266 28.9998 7.93064V28.3333H29.3332C29.8855 28.3333 30.3332 28.781 30.3332 29.3333C30.3332 29.8856 29.8855 30.3333 29.3332 30.3333H2.6665C2.11422 30.3333 1.6665 29.8856 1.6665 29.3333C1.6665 28.781 2.11422 28.3333 2.6665 28.3333H2.99984L2.99984 11.9306C2.9998 10.7327 2.99976 9.7337 3.10639 8.94066C3.21893 8.1036 3.46649 7.34786 4.07378 6.74057C4.68107 6.13328 5.43681 5.88572 6.27386 5.77318C7.06691 5.66656 8.06586 5.66659 9.26383 5.66663L13.7038 5.66663C13.7724 4.50106 13.9873 3.49372 14.7404 2.74057C15.3477 2.13328 16.1035 1.88572 16.9405 1.77318C17.7336 1.66656 18.7325 1.66659 19.9305 1.66663ZM14.6756 7.66663C14.6739 7.66663 14.6722 7.66663 14.6705 7.66663C14.6691 7.66663 14.6678 7.66663 14.6665 7.66663H9.33317C8.04782 7.66663 7.18441 7.66875 6.54036 7.75534C5.92508 7.83806 5.66175 7.98103 5.48799 8.15478C5.31424 8.32854 5.17127 8.59187 5.08855 9.20715C5.00196 9.8512 4.99984 10.7146 4.99984 12V28.3333H10.9998V25.3333C10.9998 24.781 11.4476 24.3333 11.9998 24.3333C12.5521 24.3333 12.9998 24.781 12.9998 25.3333V28.3333H18.9998V12C18.9998 10.7146 18.9977 9.8512 18.9111 9.20715C18.8284 8.59187 18.6854 8.32854 18.5117 8.15478C18.3379 7.98103 18.0746 7.83806 17.4593 7.75534C16.8168 7.66896 15.9559 7.66664 14.6756 7.66663ZM20.9998 28.3333L20.9998 11.9306C20.9999 10.7327 20.9999 9.7337 20.8933 8.94066C20.7808 8.1036 20.5332 7.34786 19.9259 6.74057C19.3186 6.13328 18.5629 5.88572 17.7258 5.77318C17.1587 5.69693 16.4862 5.67522 15.711 5.66906C15.7779 4.73621 15.9246 4.3848 16.1547 4.15478C16.3284 3.98103 16.5917 3.83807 17.207 3.75534C17.8511 3.66875 18.7145 3.66663 19.9998 3.66663H22.6665C23.9519 3.66663 24.8153 3.66875 25.4593 3.75534C26.0746 3.83807 26.3379 3.98103 26.5117 4.15478C26.6854 4.32854 26.8284 4.59187 26.9111 5.20715C26.9977 5.8512 26.9998 6.71461 26.9998 7.99996V28.3333H20.9998ZM6.99984 10.6666C6.99984 10.1143 7.44755 9.66663 7.99984 9.66663H15.9998C16.5521 9.66663 16.9998 10.1143 16.9998 10.6666C16.9998 11.2189 16.5521 11.6666 15.9998 11.6666H7.99984C7.44755 11.6666 6.99984 11.2189 6.99984 10.6666ZM6.99984 14.6666C6.99984 14.1143 7.44755 13.6666 7.99984 13.6666H15.9998C16.5521 13.6666 16.9998 14.1143 16.9998 14.6666C16.9998 15.2189 16.5521 15.6666 15.9998 15.6666H7.99984C7.44755 15.6666 6.99984 15.2189 6.99984 14.6666ZM6.99984 18.6666C6.99984 18.1143 7.44755 17.6666 7.99984 17.6666H15.9998C16.5521 17.6666 16.9998 18.1143 16.9998 18.6666C16.9998 19.2189 16.5521 19.6666 15.9998 19.6666H7.99984C7.44755 19.6666 6.99984 19.2189 6.99984 18.6666Z"
+                                    fill="#EAC006" />
+                            </svg>
+                        </div>
+                        <div class="flex flex-col items-center gap-4">
+                            <p class="text-body-xl-semibold text-gray-9 text-center">
+                                Nâng cao giá trị
+                                <br> thương hiệu
+                            </p>
+                            <p class="text-body-md-regular text-gray-9 text-center">
+                                Gian hàng triển lãm đẹp giúp nhận diện và ghi nhớ thương hiệu, xây dựng hình ảnh tích
+                                cực trong mắt khách hàng.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="why-choose-design">
+                        <div class="icon-hover icon-72-32 bg-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none">
+                                <path
+                                    d="M20.6665 19.3333C20.6665 20.0697 20.0695 20.6666 19.3332 20.6666C18.5968 20.6666 17.9998 20.0697 17.9998 19.3333C17.9998 18.5969 18.5968 18 19.3332 18C20.0695 18 20.6665 18.5969 20.6665 19.3333Z"
+                                    fill="#EAC006" />
+                                <path
+                                    d="M13.9998 12.6666C13.9998 13.403 13.4029 14 12.6665 14C11.9301 14 11.3332 13.403 11.3332 12.6666C11.3332 11.9302 11.9301 11.3333 12.6665 11.3333C13.4029 11.3333 13.9998 11.9302 13.9998 12.6666Z"
+                                    fill="#EAC006" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.7069 11.2929C21.0975 11.6834 21.0975 12.3165 20.7069 12.7071L12.7069 20.7071C12.3164 21.0976 11.6833 21.0976 11.2927 20.7071C10.9022 20.3165 10.9022 19.6834 11.2927 19.2929L19.2927 11.2929C19.6833 10.9023 20.3164 10.9023 20.7069 11.2929Z"
+                                    fill="#EAC006" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.9233 1.66663H16.0763C19.1542 1.66661 21.5662 1.6666 23.4482 1.91962C25.3745 2.17861 26.8946 2.71906 28.0877 3.91214C29.2807 5.10522 29.8212 6.62525 30.0802 8.55157C30.3332 10.4336 30.3332 12.8456 30.3332 15.9235V16.0765C30.3332 19.1543 30.3332 21.5664 30.0802 23.4484C29.8212 25.3747 29.2807 26.8947 28.0877 28.0878C26.8946 29.2809 25.3745 29.8213 23.4482 30.0803C21.5662 30.3333 19.1542 30.3333 16.0763 30.3333H15.9233C12.8455 30.3333 10.4334 30.3333 8.55144 30.0803C6.62513 29.8213 5.1051 29.2809 3.91202 28.0878C2.71894 26.8947 2.17849 25.3747 1.9195 23.4484C1.66647 21.5664 1.66649 19.1543 1.6665 16.0765V15.9235C1.66649 12.8456 1.66647 10.4335 1.9195 8.55157C2.17849 6.62525 2.71894 5.10522 3.91202 3.91214C5.1051 2.71906 6.62513 2.17861 8.55144 1.91962C10.4334 1.6666 12.8455 1.66661 15.9233 1.66663ZM8.81794 3.90179C7.1134 4.13096 6.08577 4.56681 5.32623 5.32635C4.56669 6.0859 4.13083 7.11352 3.90166 8.81806C3.66863 10.5514 3.6665 12.829 3.6665 16C3.6665 19.1709 3.66863 21.4486 3.90166 23.1819C4.13083 24.8864 4.56669 25.914 5.32623 26.6736C6.08577 27.4331 7.1134 27.869 8.81794 28.0981C10.5512 28.3312 12.8289 28.3333 15.9998 28.3333C19.1708 28.3333 21.4484 28.3312 23.1817 28.0981C24.8863 27.869 25.9139 27.4331 26.6734 26.6736C27.433 25.914 27.8688 24.8864 28.098 23.1819C28.331 21.4486 28.3332 19.1709 28.3332 16C28.3332 12.829 28.331 10.5514 28.098 8.81806C27.8688 7.11352 27.433 6.0859 26.6734 5.32635C25.9139 4.56681 24.8863 4.13096 23.1817 3.90179C21.4484 3.66875 19.1708 3.66663 15.9998 3.66663C12.8289 3.66663 10.5512 3.66875 8.81794 3.90179Z"
+                                    fill="#EAC006" />
+                            </svg>
+                        </div>
+                        <div class="flex flex-col items-center gap-4">
+                            <p class="text-body-xl-semibold text-gray-9 text-center">
+                                Thúc đẩy doanh số
+                                <br> bán hàng
+                            </p>
+                            <p class="text-body-md-regular text-gray-9 text-center">
+                                Gian hàng hội chợ là cơ hội giới thiệu sản phẩm mới, chương trình khuyến mãi, tạo sức
+                                hút và tăng khả năng bán hàng.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="why-choose-design">
+                        <div class="icon-hover icon-72-32 bg-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.9998 2.66663C14.9998 2.11434 15.4476 1.66663 15.9998 1.66663C23.9159 1.66663 30.3332 8.08388 30.3332 16C30.3332 23.916 23.9159 30.3333 15.9998 30.3333C8.08376 30.3333 1.6665 23.916 1.6665 16C1.6665 15.4477 2.11422 15 2.6665 15C3.21879 15 3.6665 15.4477 3.6665 16C3.6665 22.8115 9.18832 28.3333 15.9998 28.3333C22.8113 28.3333 28.3332 22.8115 28.3332 16C28.3332 9.18845 22.8113 3.66663 15.9998 3.66663C15.4476 3.66663 14.9998 3.21891 14.9998 2.66663ZM15.9998 11C16.5521 11 16.9998 11.4477 16.9998 12V16.3333H21.3332C21.8855 16.3333 22.3332 16.781 22.3332 17.3333C22.3332 17.8856 21.8855 18.3333 21.3332 18.3333H15.9998C15.4476 18.3333 14.9998 17.8856 14.9998 17.3333V12C14.9998 11.4477 15.4476 11 15.9998 11Z"
+                                    fill="#EAC006" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12.1326 3.19668C12.3315 3.71191 12.0751 4.29082 11.5598 4.48971C11.3712 4.5625 11.1849 4.6398 11.0009 4.72149C10.4961 4.94558 9.90526 4.71804 9.68116 4.21326C9.45707 3.70848 9.68462 3.11761 10.1894 2.89352C10.4034 2.79851 10.6202 2.70859 10.8396 2.6239C11.3548 2.42501 11.9337 2.68145 12.1326 3.19668ZM7.53011 5.65365C7.91099 6.05358 7.89555 6.68656 7.49561 7.06744C7.34939 7.2067 7.20658 7.34951 7.06732 7.49574C6.68643 7.89567 6.05346 7.91111 5.65352 7.53023C5.25359 7.14935 5.23815 6.51637 5.61903 6.11644C5.78072 5.94666 5.94654 5.78084 6.11632 5.61915C6.51625 5.23827 7.14923 5.25371 7.53011 5.65365ZM4.21313 9.68129C4.71791 9.90538 4.94545 10.4962 4.72136 11.001C4.63968 11.185 4.56238 11.3714 4.48958 11.5599C4.29069 12.0752 3.71179 12.3316 3.19656 12.1327C2.68133 11.9338 2.42488 11.3549 2.62377 10.8397C2.70846 10.6203 2.79839 10.4035 2.8934 10.1895C3.11749 9.68474 3.70836 9.4572 4.21313 9.68129Z"
+                                    fill="#EAC006" />
+                            </svg>
+                        </div>
+                        <div class="flex flex-col items-center gap-4">
+                            <p class="text-body-xl-semibold text-gray-9 text-center">
+                                Tối ưu chi phí & thời gian
+                                <br> thi công
+                            </p>
+                            <p class="text-body-md-regular text-gray-9 text-center">
+                                Thi công gian hàng triển lãm chuyên nghiệp tối ưu chi phí, giảm rủi ro, đảm bảo hoàn
+                                thành gian hàng nhanh chóng.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------- section 4 -------------------- -->
+        <section class="py-10 lg:py-[100px]">
+            <div class="container flex flex-col gap-10 lg:gap-12">
+                <div class="flex items-center justify-center">
+                    <h2 class="text-heading-h1 text-gray-9 text-center">
+                        Quy trình thiết kế và thi công gian hàng
+                    </h2>
+                </div>
+
+                <!-- Slider main container -->
+                <div id="product-design-swiper" class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-8">
+                                <figure class="rounded-2xl overflow-hidden"><img src="/assets/image/design-s4-img.png"
+                                        alt="img"></figure>
+                                <div class="flex flex-col gap-2 py-6">
+                                    <p class="text-body-xl-medium text-gray-9">
+                                        Phong cách tân cổ điển
+                                    </p>
+                                    <p class="text-body-md-regular text-gray-7">
+                                        Sang trọng, quý phái với nhiều kiểu hoa văn họa tiết
+                                        cầu kỳ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-8">
+                                <figure class="rounded-2xl overflow-hidden"><img src="/assets/image/design-s4-img.png"
+                                        alt="img"></figure>
+                                <div class="flex flex-col gap-2 py-6">
+                                    <p class="text-body-xl-medium text-gray-9">
+                                        Phong cách tân cổ điển
+                                    </p>
+                                    <p class="text-body-md-regular text-gray-7">
+                                        Sang trọng, quý phái với nhiều kiểu hoa văn họa tiết
+                                        cầu kỳ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-8">
+                                <figure class="rounded-2xl overflow-hidden"><img src="/assets/image/design-s4-img.png"
+                                        alt="img"></figure>
+                                <div class="flex flex-col gap-2 py-6">
+                                    <p class="text-body-xl-medium text-gray-9">
+                                        Phong cách tân cổ điển
+                                    </p>
+                                    <p class="text-body-md-regular text-gray-7">
+                                        Sang trọng, quý phái với nhiều kiểu hoa văn họa tiết
+                                        cầu kỳ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="flex flex-col gap-8">
+                                <figure class="rounded-2xl overflow-hidden"><img src="/assets/image/design-s4-img.png"
+                                        alt="img"></figure>
+                                <div class="flex flex-col gap-2 py-6">
+                                    <p class="text-body-xl-medium text-gray-9">
+                                        Phong cách tân cổ điển
+                                    </p>
+                                    <p class="text-body-md-regular text-gray-7">
+                                        Sang trọng, quý phái với nhiều kiểu hoa văn họa tiết
+                                        cầu kỳ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination home"></div>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------- section 5 -------------------- -->
+        <section class="py-10 lg:pt-20 lg:pb-[100px]">
+            <div class="container flex flex-col gap-10 lg:gap-14">
+                <div class="flex items-center justify-center">
+                    <h2 class="text-heading-h1 text-gray-9 text-center">
+                        Quy trình thiết kế và thi công gian hàng
+                    </h2>
+                </div>
+                <style>
+                    .single-item-step {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 32px;
+                    }
+
+                    .single-item-step .line {
+                        width: 100%;
+                        height: 2px;
+                        position: absolute;
+                        top: calc(96px/2);
+                        left: calc(50% + 96px/2);
+                        background: #EAC006;
+                    }
+
+                    .single-item-step:last-child .line {
+                        display: none;
+                    }
+
+                    .step-content {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 8px;
+                    }
+
+                    .step-num {
+                        width: 96px;
+                        height: 96px;
+                        border-radius: 49px;
+                        background: #FFF9DD;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    @media (max-width:992px) {
+                        .single-item-step {
+                            flex-direction: row;
+                        }
+
+                        .single-item-step .line {
+                            width: 2px;
+                            height: 100%;
+                            top: calc(50% + 96px/2);
+                            left: calc(96px/2);
+                        }
+                    }
+                </style>
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-10 2xl:gap-14">
+                    <div class="single-item-step">
+                        <div class="step-num">
+                            <p class="text-body-3xl-medium text-primary">01</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step-content">
+                            <p class="text-body-xl-semibold text-mono-dark-90">Tiếp nhận và tư vấn</p>
+                            <ul class="list-disc pl-5 text-body-md-regular text-gray-7">
+                                <li>Thu thập thông tin về sản phẩm, mục tiêu, ngân sách.
+                                </li>
+                                <li>
+                                    Khảo sát địa điểm, diện tích, thời gian thi công gian hàng triển lãm.
+                                </li>
+                                <li>Phát triển ý tưởng thiết kế gian hàng hội chợ triển lãm qua bản vẽ chi tiết và hình
+                                    ảnh 3D.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single-item-step">
+                        <div class="step-num">
+                            <p class="text-body-3xl-medium text-primary">02</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step-content">
+                            <p class="text-body-xl-semibold text-mono-dark-90">Tiếp nhận và tư vấn</p>
+                            <ul class="list-disc pl-5 text-body-md-regular text-gray-7">
+                                <li>Thu thập thông tin về sản phẩm, mục tiêu, ngân sách.
+                                </li>
+                                <li>
+                                    Khảo sát địa điểm, diện tích, thời gian thi công gian hàng triển lãm.
+                                </li>
+                                <li>Phát triển ý tưởng thiết kế gian hàng hội chợ triển lãm qua bản vẽ chi tiết và hình
+                                    ảnh 3D.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single-item-step">
+                        <div class="step-num">
+                            <p class="text-body-3xl-medium text-primary">03</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step-content">
+                            <p class="text-body-xl-semibold text-mono-dark-90">Tiếp nhận và tư vấn</p>
+                            <ul class="list-disc pl-5 text-body-md-regular text-gray-7">
+                                <li>Thu thập thông tin về sản phẩm, mục tiêu, ngân sách.
+                                </li>
+                                <li>
+                                    Khảo sát địa điểm, diện tích, thời gian thi công gian hàng triển lãm.
+                                </li>
+                                <li>Phát triển ý tưởng thiết kế gian hàng hội chợ triển lãm qua bản vẽ chi tiết và hình
+                                    ảnh 3D.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single-item-step">
+                        <div class="step-num">
+                            <p class="text-body-3xl-medium text-primary">04</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step-content">
+                            <p class="text-body-xl-semibold text-mono-dark-90">Tiếp nhận và tư vấn</p>
+                            <ul class="list-disc pl-5 text-body-md-regular text-gray-7">
+                                <li>Thu thập thông tin về sản phẩm, mục tiêu, ngân sách.
+                                </li>
+                                <li>
+                                    Khảo sát địa điểm, diện tích, thời gian thi công gian hàng triển lãm.
+                                </li>
+                                <li>Phát triển ý tưởng thiết kế gian hàng hội chợ triển lãm qua bản vẽ chi tiết và hình
+                                    ảnh 3D.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------- section 6 -------------------- -->
+        <section class="py-10 lg:py-[100px] bg-primary-2 relative">
+            <div class="hidden lg:block absolute top-0 right-0">
+                <figure><img src="/assets/image/home-s5-illus.svg" alt="illus"></figure>
+            </div>
+            <div class="container flex flex-col gap-10 lg:gap-16">
+                <h2 class="lg:max-w-[741px] mx-auto text-heading-h1 text-white text-center">
+                    Mẫu thiết kế gian hàng hiện đại
+                    nổi bật từ Bắc Việt
+                </h2>
+                <div class="grid grid-cols-12 grid-row-3 gap-6">
+                    <div class="col-span-6 sm:col-span-3 row-span-1">
+                        <figure class="rounded-2xl overflow-hidden"><img src="/assets/image/design-demo-1.png"
+                                alt="img-1"></figure>
+                    </div>
+                    <div class="col-span-6 sm:col-span-3 row-span-1">
+                        <figure class="rounded-2xl overflow-hidden"><img src="/assets/image/design-demo-1.png"
+                                alt="img-1"></figure>
+                    </div>
+                    <div class="col-span-12 sm:col-span-6 row-span-2">
+                        <figure class="rounded-2xl overflow-hidden"><img src="/assets/image/design-demo-2.png"
+                                alt="img-1"></figure>
+                    </div>
+                    <div class="col-span-12 sm:col-span-6 row-span-2">
+                        <figure class="rounded-2xl overflow-hidden"><img src="/assets/image/design-demo-2.png"
+                                alt="img-1"></figure>
+                    </div>
+                    <div class="col-span-6 sm:col-span-3 row-span-1">
+                        <figure class="rounded-2xl overflow-hidden"><img src="/assets/image/design-demo-1.png"
+                                alt="img-1"></figure>
+                    </div>
+                    <div class="col-span-6 sm:col-span-3 row-span-1">
+                        <figure class="rounded-2xl overflow-hidden"><img src="/assets/image/design-demo-1.png"
+                                alt="img-1"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------------- section 7 -------------------- -->
+        <style>
+            .ss7-bg {
+                position: relative;
+                background: url('./assets/image/home-s6-bg.png') no-repeat center/cover;
+            }
+
+            .ss7-bg::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.24) 100%), rgba(82, 67, 0, 0.66);
+            }
+
+            .home-form-bg {
+                border-radius: 16px;
+                background: rgba(0, 0, 0, 0.40);
+            }
+        </style>
+        <section class="ss7-bg py-10 lg:py-[100px] 2xl:py-[182px]">
+            <div class="container relative z-[2]">
+                <div class="grid grid-cols-12 gap-6">
+                    <div class="col-span-12 lg:col-span-5">
+                        <div class="flex flex-col gap-2 lg:max-w-[488px]">
+                            <p class="text-body-2xl-semibold text-primary-2 uppercase">
+                                Liên hệ
+                            </p>
+                            <h2 class="text-heading-h1 text-gray-1">
+                                Tư vấn khách hàng
+                            </h2>
+                            <p class="text-body-sm-regular text-gray-1">
+                                Bắc Việt sẽ gọi điện thoại tư vấn trực tiếp cho quý khách khi để lại thông tin hoặc liên
+                                hệ chúng tôi
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-span-12 lg:col-span-7">
+                        <div class="home-form-bg max-md:p-6 p-10">
+                            <form class="flex flex-col gap-6 ">
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                    <label class="input-label"><input type="text" class="input-field"
+                                            placeholder="Tên"></label>
+                                    <label class="input-label"><input type="text" class="input-field"
+                                            placeholder="Họ"></label>
+                                </div>
+                                <label class="input-label"><input type="text" class="input-field"
+                                        placeholder="Địa chỉ email"></label>
+                                <label class="input-label"><input type="text" class="input-field"
+                                        placeholder="Số điện thoại"></label>
+                                <button class="button mt-6">Gửi thông tin</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------- section 7 -------------------- -->
+
+        <!-- -------------------- section 8 -------------------- -->
+
+
+
+    </main>
+    <footer class="footer bg-primary">
+        <div class="container">
+            <!-- more info -->
+            <div class="grid grid-cols-12 gap-6 py-10 lg:py-16">
+                <!-- first col -->
+                <div class="col-span-12 lg:col-span-3">
+                    <figure class="w-[180px] lg:w-[270px]"><img class="min-w-full" src="/assets/image/header-logo.svg"
+                            alt="">
+                    </figure>
+                </div>
+                <!-- second col -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col gap-11 lg:pl-10">
+                    <div class=" flex flex-col gap-6">
+                        <h2 class="text-body-md-semibold text-gray-9">
+                            Liên hệ
+                        </h2>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.2609 13.75C12.9375 13.2449 12.75 12.6443 12.75 12C12.75 10.2051 14.2051 8.75 16 8.75C17.7949 8.75 19.25 10.2051 19.25 12C19.25 13.7949 17.7949 15.25 16 15.25H8C6.20507 15.25 4.75 13.7949 4.75 12C4.75 10.2051 6.20507 8.75 8 8.75C9.79493 8.75 11.25 10.2051 11.25 12C11.25 12.6443 11.0625 13.2449 10.7391 13.75H13.2609ZM14.25 12C14.25 11.0335 15.0335 10.25 16 10.25C16.9665 10.25 17.75 11.0335 17.75 12C17.75 12.9665 16.9665 13.75 16 13.75C15.0335 13.75 14.25 12.9665 14.25 12ZM8 13.75C8.9665 13.75 9.75 12.9665 9.75 12C9.75 11.0335 8.9665 10.25 8 10.25C7.0335 10.25 6.25 11.0335 6.25 12C6.25 12.9665 7.0335 13.75 8 13.75Z"
+                                            fill="#1F2237" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z"
+                                            fill="#1F2237" />
+                                    </svg>
+                                </div>
+                                <div class="flex-1 flex flex-col gap-1">
+                                    <p class="text-body-md-regular text-gray-9">
+                                        Hotline </p>
+                                    <a href="#" class="text-body-md-semibold">
+                                        0123 456 789 </a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.94358 3.25H14.0564C15.8942 3.24998 17.3498 3.24997 18.489 3.40314C19.6614 3.56076 20.6104 3.89288 21.3588 4.64124C22.1071 5.38961 22.4392 6.33856 22.5969 7.51098C22.75 8.65019 22.75 10.1058 22.75 11.9436V12.0564C22.75 13.8942 22.75 15.3498 22.5969 16.489C22.4392 17.6614 22.1071 18.6104 21.3588 19.3588C20.6104 20.1071 19.6614 20.4392 18.489 20.5969C17.3498 20.75 15.8942 20.75 14.0564 20.75H9.94359C8.10583 20.75 6.65019 20.75 5.51098 20.5969C4.33856 20.4392 3.38961 20.1071 2.64124 19.3588C1.89288 18.6104 1.56076 17.6614 1.40314 16.489C1.24997 15.3498 1.24998 13.8942 1.25 12.0564V11.9436C1.24998 10.1058 1.24997 8.65019 1.40314 7.51098C1.56076 6.33856 1.89288 5.38961 2.64124 4.64124C3.38961 3.89288 4.33856 3.56076 5.51098 3.40314C6.65019 3.24997 8.10582 3.24998 9.94358 3.25ZM5.71085 4.88976C4.70476 5.02502 4.12511 5.27869 3.7019 5.7019C3.27869 6.12511 3.02502 6.70476 2.88976 7.71085C2.75159 8.73851 2.75 10.0932 2.75 12C2.75 13.9068 2.75159 15.2615 2.88976 16.2892C3.02502 17.2952 3.27869 17.8749 3.7019 18.2981C4.12511 18.7213 4.70476 18.975 5.71085 19.1102C6.73851 19.2484 8.09318 19.25 10 19.25H14C15.9068 19.25 17.2615 19.2484 18.2892 19.1102C19.2952 18.975 19.8749 18.7213 20.2981 18.2981C20.7213 17.8749 20.975 17.2952 21.1102 16.2892C21.2484 15.2615 21.25 13.9068 21.25 12C21.25 10.0932 21.2484 8.73851 21.1102 7.71085C20.975 6.70476 20.7213 6.12511 20.2981 5.7019C19.8749 5.27869 19.2952 5.02502 18.2892 4.88976C17.2615 4.75159 15.9068 4.75 14 4.75H10C8.09318 4.75 6.73851 4.75159 5.71085 4.88976ZM5.42383 7.51986C5.68901 7.20165 6.16193 7.15866 6.48014 7.42383L8.63903 9.22291C9.57199 10.0004 10.2197 10.5384 10.7666 10.8901C11.2959 11.2306 11.6549 11.3449 12 11.3449C12.3451 11.3449 12.7041 11.2306 13.2334 10.8901C13.7803 10.5384 14.428 10.0004 15.361 9.22291L17.5199 7.42383C17.8381 7.15866 18.311 7.20165 18.5762 7.51986C18.8413 7.83807 18.7983 8.31099 18.4801 8.57617L16.2836 10.4066C15.3973 11.1452 14.6789 11.7439 14.0448 12.1517C13.3843 12.5765 12.7411 12.8449 12 12.8449C11.2589 12.8449 10.6157 12.5765 9.95518 12.1517C9.32112 11.7439 8.60272 11.1452 7.71636 10.4066L5.51986 8.57617C5.20165 8.31099 5.15866 7.83807 5.42383 7.51986Z"
+                                            fill="#1F2237" />
+                                    </svg>
+                                </div>
+                                <div class="flex-1 flex flex-col gap-1">
+                                    <p class="text-body-md-regular text-gray-9">
+                                        Email </p>
+                                    <a href="#" class="text-body-md-semibold">
+                                        info@bacviet.com </a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.25 10.1433C3.25 5.24427 7.15501 1.25 12 1.25C16.845 1.25 20.75 5.24427 20.75 10.1433C20.75 12.5084 20.076 15.0479 18.8844 17.2419C17.6944 19.4331 15.9556 21.3372 13.7805 22.3539C12.6506 22.882 11.3494 22.882 10.2195 22.3539C8.04437 21.3372 6.30562 19.4331 5.11556 17.2419C3.92403 15.0479 3.25 12.5084 3.25 10.1433ZM12 2.75C8.00843 2.75 4.75 6.04748 4.75 10.1433C4.75 12.2404 5.35263 14.5354 6.4337 16.526C7.51624 18.5192 9.04602 20.1496 10.8546 20.995C11.5821 21.335 12.4179 21.335 13.1454 20.995C14.954 20.1496 16.4838 18.5192 17.5663 16.526C18.6474 14.5354 19.25 12.2404 19.25 10.1433C19.25 6.04748 15.9916 2.75 12 2.75ZM12 7.75C10.7574 7.75 9.75 8.75736 9.75 10C9.75 11.2426 10.7574 12.25 12 12.25C13.2426 12.25 14.25 11.2426 14.25 10C14.25 8.75736 13.2426 7.75 12 7.75ZM8.25 10C8.25 7.92893 9.92893 6.25 12 6.25C14.0711 6.25 15.75 7.92893 15.75 10C15.75 12.0711 14.0711 13.75 12 13.75C9.92893 13.75 8.25 12.0711 8.25 10Z"
+                                            fill="#1F2237" />
+                                    </svg>
+                                </div>
+                                <div class="flex-1 flex flex-col gap-1">
+                                    <p class="text-body-md-regular text-gray-9">
+                                        Địa chỉ </p>
+                                    <a href="#" class="text-body-md-semibold">
+                                        1011 Đường Láng, Quận Cầu Giấy, Hà Nội </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- third col -->
+                <div class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col gap-8 lg:max-w-[360px]">
+                    <div class=" flex flex-col gap-6">
+                        <h2 class="text-body-md-semibold text-gray-9">
+                            Liên hệ
+                        </h2>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="#" class="link-list">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.67461 2.95388C5.88428 2.77417 6.19993 2.79845 6.37964 3.00811L10.3796 7.67478C10.5401 7.86202 10.5401 8.13832 10.3796 8.32557L6.37964 12.9922C6.19993 13.2019 5.88428 13.2262 5.67461 13.0465C5.46495 12.8668 5.44067 12.5511 5.62038 12.3414L9.34147 8.00017L5.62038 3.6589C5.44067 3.44924 5.46495 3.13359 5.67461 2.95388Z"
+                                        fill="#1F2237" />
+                                </svg>
+                                Trang chủ
+                            </a>
+                            <a href="#" class="link-list">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.67461 2.95388C5.88428 2.77417 6.19993 2.79845 6.37964 3.00811L10.3796 7.67478C10.5401 7.86202 10.5401 8.13832 10.3796 8.32557L6.37964 12.9922C6.19993 13.2019 5.88428 13.2262 5.67461 13.0465C5.46495 12.8668 5.44067 12.5511 5.62038 12.3414L9.34147 8.00017L5.62038 3.6589C5.44067 3.44924 5.46495 3.13359 5.67461 2.95388Z"
+                                        fill="#1F2237" />
+                                </svg>
+                                Dự án tiêu biểu
+                            </a>
+                            <a href="#" class="link-list">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.67461 2.95388C5.88428 2.77417 6.19993 2.79845 6.37964 3.00811L10.3796 7.67478C10.5401 7.86202 10.5401 8.13832 10.3796 8.32557L6.37964 12.9922C6.19993 13.2019 5.88428 13.2262 5.67461 13.0465C5.46495 12.8668 5.44067 12.5511 5.62038 12.3414L9.34147 8.00017L5.62038 3.6589C5.44067 3.44924 5.46495 3.13359 5.67461 2.95388Z"
+                                        fill="#1F2237" />
+                                </svg>
+                                Về chúng tôi
+                            </a>
+                            <a href="#" class="link-list">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.67461 2.95388C5.88428 2.77417 6.19993 2.79845 6.37964 3.00811L10.3796 7.67478C10.5401 7.86202 10.5401 8.13832 10.3796 8.32557L6.37964 12.9922C6.19993 13.2019 5.88428 13.2262 5.67461 13.0465C5.46495 12.8668 5.44067 12.5511 5.62038 12.3414L9.34147 8.00017L5.62038 3.6589C5.44067 3.44924 5.46495 3.13359 5.67461 2.95388Z"
+                                        fill="#1F2237" />
+                                </svg>
+                                Tin tức
+                            </a>
+                            <a href="#" class="link-list">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.67461 2.95388C5.88428 2.77417 6.19993 2.79845 6.37964 3.00811L10.3796 7.67478C10.5401 7.86202 10.5401 8.13832 10.3796 8.32557L6.37964 12.9922C6.19993 13.2019 5.88428 13.2262 5.67461 13.0465C5.46495 12.8668 5.44067 12.5511 5.62038 12.3414L9.34147 8.00017L5.62038 3.6589C5.44067 3.44924 5.46495 3.13359 5.67461 2.95388Z"
+                                        fill="#1F2237" />
+                                </svg>
+                                Dịch vụ
+                            </a>
+                            <a href="#" class="link-list">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.67461 2.95388C5.88428 2.77417 6.19993 2.79845 6.37964 3.00811L10.3796 7.67478C10.5401 7.86202 10.5401 8.13832 10.3796 8.32557L6.37964 12.9922C6.19993 13.2019 5.88428 13.2262 5.67461 13.0465C5.46495 12.8668 5.44067 12.5511 5.62038 12.3414L9.34147 8.00017L5.62038 3.6589C5.44067 3.44924 5.46495 3.13359 5.67461 2.95388Z"
+                                        fill="#1F2237" />
+                                </svg>
+                                Liên hệ
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class=" flex flex-col gap-6">
+                        <h2 class="text-body-md-semibold text-gray-9">
+                            Theo dõi chúng tôi
+                        </h2>
+                        <div class="social-list">
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17"
+                                    fill="none">
+                                    <path
+                                        d="M8.91497 9.04161L9.37091 6.14475H6.56234V4.26179C6.56234 3.46968 6.95444 2.69567 8.20827 2.69567H9.50313V0.228813C8.74906 0.108566 7.98712 0.0435134 7.22344 0.0341797C4.91185 0.0341797 3.4027 1.42377 3.4027 3.93589V6.14475H0.840332V9.04161H3.4027V16.0484H6.56234V9.04161H8.91497Z"
+                                        fill="#101828" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                    fill="none">
+                                    <path
+                                        d="M6.00371 8.0408C6.00371 6.56679 7.19796 5.37155 8.67155 5.37155C10.1451 5.37155 11.34 6.56679 11.34 8.0408C11.34 9.51481 10.1451 10.7101 8.67155 10.7101C7.19796 10.7101 6.00371 9.51481 6.00371 8.0408ZM4.56118 8.0408C4.56118 10.3116 6.40139 12.1524 8.67155 12.1524C10.9417 12.1524 12.7819 10.3116 12.7819 8.0408C12.7819 5.76999 10.9417 3.92925 8.67155 3.92925C6.40139 3.92925 4.56118 5.76999 4.56118 8.0408ZM11.9841 3.76622C11.984 3.95626 12.0402 4.14205 12.1457 4.30011C12.2512 4.45816 12.4012 4.58138 12.5767 4.65417C12.7522 4.72697 12.9453 4.74607 13.1317 4.70907C13.318 4.67207 13.4892 4.58063 13.6236 4.4463C13.758 4.31198 13.8495 4.14081 13.8867 3.95444C13.9238 3.76806 13.9049 3.57486 13.8322 3.39926C13.7596 3.22366 13.6365 3.07354 13.4786 2.9679C13.3207 2.86226 13.135 2.80583 12.945 2.80575H12.9446C12.69 2.80587 12.4458 2.90709 12.2657 3.08718C12.0856 3.26726 11.9843 3.51149 11.9841 3.76622V3.76622ZM5.43761 14.5584C4.65717 14.5228 4.23298 14.3928 3.95109 14.283C3.57736 14.1374 3.3107 13.9641 3.03034 13.684C2.74998 13.404 2.57644 13.1375 2.43158 12.7637C2.32169 12.4818 2.19169 12.0574 2.15622 11.2767C2.11741 10.4327 2.10966 10.1791 2.10966 8.04087C2.10966 5.90258 2.11805 5.64975 2.15622 4.80503C2.19176 4.02437 2.32272 3.60076 2.43158 3.31808C2.57708 2.94424 2.75037 2.67751 3.03034 2.39707C3.31032 2.11663 3.57672 1.94304 3.95109 1.79814C4.23285 1.68822 4.65717 1.55818 5.43761 1.52269C6.28138 1.48388 6.53484 1.47612 8.67155 1.47612C10.8083 1.47612 11.062 1.48452 11.9064 1.52269C12.6869 1.55825 13.1104 1.68924 13.393 1.79814C13.7667 1.94304 14.0334 2.11701 14.3137 2.39707C14.5941 2.67713 14.767 2.94424 14.9125 3.31808C15.0224 3.59993 15.1524 4.02437 15.1878 4.80503C15.2266 5.64975 15.2344 5.90258 15.2344 8.04087C15.2344 10.1791 15.2266 10.432 15.1878 11.2767C15.1523 12.0574 15.0217 12.4817 14.9125 12.7637C14.767 13.1375 14.5937 13.4042 14.3137 13.684C14.0337 13.9638 13.7667 14.1374 13.393 14.283C13.1112 14.3929 12.6869 14.5229 11.9064 14.5584C11.0627 14.5972 10.8092 14.605 8.67155 14.605C6.53388 14.605 6.28112 14.5972 5.43761 14.5584V14.5584ZM5.37133 0.0821825C4.51917 0.121001 3.93687 0.256161 3.42834 0.454097C2.90169 0.658502 2.45585 0.93273 2.01034 1.37767C1.56482 1.82261 1.29138 2.26928 1.08703 2.79608C0.889153 3.30508 0.754032 3.88723 0.715225 4.73963C0.675777 5.59338 0.666748 5.86633 0.666748 8.0408C0.666748 10.2153 0.675777 10.4882 0.715225 11.342C0.754032 12.1944 0.889153 12.7765 1.08703 13.2855C1.29138 13.812 1.56489 14.2592 2.01034 14.7039C2.45579 15.1487 2.90169 15.4225 3.42834 15.6275C3.93783 15.8254 4.51917 15.9606 5.37133 15.9994C6.22528 16.0382 6.4977 16.0479 8.67155 16.0479C10.8454 16.0479 11.1183 16.0389 11.9718 15.9994C12.824 15.9606 13.4059 15.8254 13.9148 15.6275C14.4411 15.4225 14.8872 15.1489 15.3328 14.7039C15.7783 14.259 16.0511 13.812 16.2561 13.2855C16.4539 12.7765 16.5897 12.1944 16.6279 11.342C16.6667 10.4876 16.6757 10.2153 16.6757 8.0408C16.6757 5.86633 16.6667 5.59338 16.6279 4.73963C16.5891 3.88716 16.4539 3.30476 16.2561 2.79608C16.0511 2.2696 15.7776 1.82331 15.3328 1.37767C14.8879 0.932025 14.4411 0.658502 13.9154 0.454097C13.4059 0.256161 12.8239 0.12036 11.9724 0.0821825C11.1189 0.043364 10.846 0.0336914 8.67219 0.0336914C6.49834 0.0336914 6.22528 0.0427234 5.37133 0.0821825Z"
+                                        fill="#101828" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="bg-[#DBB200] py-4">
+            <div class="container flex items-center justify-center">
+                <p class="text-body-md-regular text-black text-center">
+                    Copyright © 2025 <a href="#" class="inline-block text-black hover:text-primary-2">
+                        Bắc Việt
+                    </a>. All Right Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- header script -->
+    <script defer src="/assets/js/header-scroll.js"></script>
+    <script defer src="/assets/js/sub-menu.js"></script>
+    <script defer src="/assets/js/header.js"></script>
+    <script defer src="/assets/js/accordion.js"></script>
+    <!-- swiper script -->
+    <script defer>
+        const swiper = new Swiper('#product-design-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2
+                },
+                992: {
+                    slidesPerView: 2
+                },
+                1280: {
+                    slidesPerView: 3
+                },
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>
